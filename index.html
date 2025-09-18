@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arte Express</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand" href="#">Arte Express</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#designs">Diseños</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contacto</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Introduction Section -->
+<section class="intro-section">
+    <div class="container">
+        <h1>Diseños Digitales</h1>
+        <p class="lead">Diseños unicos, hechos para ti.</p>
+    </div>
+</section>
+
+<!-- Designs Section -->
+<section id="designs" class="container mt-5">
+    <h2 class="text-center section-title">Nuestros Diseños</h2>
+    <div class="row mb-4">
+        <div class="col-md-3">
+            <select id="categoryFilter" class="form-select">
+                <option value="all">All Categories</option>
+                <option value="sticker">Stickers</option>
+                <option value="portada">Front Pages</option>
+                <option value="wallpaper">Wallpapers</option>
+            </select>
+        </div>
+    </div>
+    <div id="designs-container" class="row">
+        <!-- Design cards will be inserted here by JavaScript -->
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
+    <div class="container">
+        <h2 class="text-center section-title">Contactanos</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h2>aa</h2>
+            </div>
+            <div class="col-md-6">
+                <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Mensaje</label>
+                        <textarea class="form-control" id="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2025 Arte Express. Todos los Derechos Reservados.</p>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    const designs = [
+        { name: 'Cosmic Cat', price: '$5', category: 'sticker', image: 'images/cosmiccat.jpg' },
+        { name: 'Cuadricula', price: '$15', category: 'portada', image: 'images/portada/Cuadricula.jpg' },
+        { name: 'Cuadricula 2', price: '$15', category: 'portada', image: 'images/portada/Cuadricula2.jpg' },
+        { name: 'Flores', price: '$15', category: 'portada', image: 'images/portada/flores.jpg' },
+        { name: 'Vida Marina', price: '$15', category: 'portada', image: 'images/portada/mar.jpg' },
+        { name: 'Azul', price: '$15', category: 'portada', image: 'images/portada/moderno.jpg' },
+        { name: 'Olas', price: '$15', category: 'portada', image: 'images/portada/olas.jpg' },
+        { name: 'Pastel', price: '$15', category: 'portada', image: 'images/portada/pastel.jpg' },
+
+        { name: 'Azul', price: '$15', category: 'sticker', image: 'images/stickeres/azul.jpg' },
+        { name: 'Clasico', price: '$15', category: 'sticker', image: 'images/stickeres/clasico.jpg' },
+        { name: 'Flores', price: '$15', category: 'sticker', image: 'images/stickeres/flores.jpg' },
+        { name: 'Gatos', price: '$15', category: 'sticker', image: 'images/stickeres/gatos.jpg' },
+        { name: 'Ositos', price: '$15', category: 'sticker', image: 'images/stickeres/ositos.jpg' },
+
+        { name: 'Ballenas', price: '$15', category: 'wallpaper', image: 'images/wallpapers/ballena.jpg' },
+        { name: 'Futurista', price: '$15', category: 'wallpaper', image: 'images/wallpapers/futurista.jpg' },
+        { name: 'Minimalista', price: '$15', category: 'wallpaper', image: 'images/wallpapers/minimalista.jpg' },
+        { name: 'Moderno', price: '$15', category: 'wallpaper', image: 'images/wallpapers/moderno.jpg' },
+        { name: 'Montaña', price: '$15', category: 'wallpaper', image: 'images/wallpapers/montaña.jpg' },
+        { name: 'Paisaje', price: '$15', category: 'wallpaper', image: 'images/wallpapers/paisaje.jpg' },
+        { name: 'Snoopy', price: '$15', category: 'wallpaper', image: 'images/wallpapers/snoopy.jpg' },
+    ];
+
+    const designsContainer = document.getElementById('designs-container');
+    const categoryFilter = document.getElementById('categoryFilter');
+
+    const displayDesigns = (filteredDesigns) => {
+        designsContainer.innerHTML = '';
+        filteredDesigns.forEach(design => {
+            const card = `
+                <div class="col-md-4 mb-4 design-card" data-category="${design.category}">
+                    <div class="card">
+                        <img src="${design.image}" class="card-img-top" alt="${design.name}">
+                        <div class="card-body">
+                            <h5 class="card-title">${design.name}</h5>
+                            <p class="card-text price">${design.price}</p>
+                            <p class="card-text category">${design.category.charAt(0).toUpperCase() + design.category.slice(1)}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+            designsContainer.innerHTML += card;
+        });
+    };
+
+    categoryFilter.addEventListener('change', () => {
+        const selectedCategory = categoryFilter.value;
+        const filteredDesigns = selectedCategory === 'all' ? designs : designs.filter(design => design.category === selectedCategory);
+        displayDesigns(filteredDesigns);
+    });
+
+    displayDesigns(designs);
+</script>
+</body>
+</html>
